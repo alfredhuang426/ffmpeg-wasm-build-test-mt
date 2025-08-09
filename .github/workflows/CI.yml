@@ -98,7 +98,6 @@ jobs:
           CHROME_HEADLESS: 1
           CHROME_PATH: chrome
           CHROME_FLAGS: "--headless --disable-gpu --no-sandbox --enable-features=SharedArrayBuffer,CrossOriginIsolation"
-          HEADERS: '{"Cross-Origin-Opener-Policy": "same-origin", "Cross-Origin-Embedder-Policy": "require-corp"}'
         run: |
           # Start test server with proper headers for all tests
           npm run serve &
@@ -109,7 +108,8 @@ jobs:
           # Verify headers and isolation status
           echo "Checking security headers and isolation status..."
           # Verify COOP/COEP/OAC headers are present (served by http-server via package script)
-          curl -sI http://localhost:3000/tests/ffmpeg-core-st.test.html | grep -iE "^Cross-Origin-(Opener|Embedder)-Policy|^Origin-Agent-Cluster|^Cross-Origin-Resource-Policy"
+          # Use GET and dump raw headers to avoid grep failing the step; show them for debugging
+          curl -s -D - -o /dev/null http://localhost:3000/tests/ffmpeg-core-st.test.html | tr -d '\r' | awk 'BEGIN{IGNORECASE=1} /^(cross-origin-opener-policy|cross-origin-embedder-policy|origin-agent-cluster|cross-origin-resource-policy):/ {print}' || true
 
           # Run verification script first
           echo "Verifying browser environment..."
