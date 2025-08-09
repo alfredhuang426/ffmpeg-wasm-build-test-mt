@@ -195,10 +195,9 @@ ENV FFMPEG_LIBS \
 RUN mkdir -p /src/dist/umd && bash -x /src/build.sh \
       ${FFMPEG_LIBS} \
       -o dist/umd/ffmpeg-core.js
-RUN mkdir -p /src/dist/esm && bash -x /src/build.sh \
-      ${FFMPEG_LIBS} \
-      -sEXPORT_ES6 \
-      -o dist/esm/ffmpeg-core.js
+
+# Post-process wasm binaries for maximum size reduction
+RUN wasm-opt -Oz -o /src/dist/umd/ffmpeg-core.wasm /src/dist/umd/ffmpeg-core.wasm
 
 # Export ffmpeg-core.wasm to dist/, use `docker buildx build -o . .` to get assets
 FROM scratch AS exportor

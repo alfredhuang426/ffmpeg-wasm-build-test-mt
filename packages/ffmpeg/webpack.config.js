@@ -2,7 +2,7 @@ const path = require("path");
 
 module.exports = {
   mode: "production",
-  devtool: "source-map",
+  devtool: false,
   entry: "./dist/esm/index.js",
   resolve: {
     extensions: [".js"],
