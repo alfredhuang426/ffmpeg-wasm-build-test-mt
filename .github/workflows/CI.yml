@@ -101,14 +101,15 @@ jobs:
           HEADERS: '{"Cross-Origin-Opener-Policy": "same-origin", "Cross-Origin-Embedder-Policy": "require-corp"}'
         run: |
           # Start test server with proper headers for all tests
-          npm run serve -- --headers "$HEADERS" &
+          npm run serve &
 
           # Increase wait time to ensure server is ready
           sleep 15
 
           # Verify headers and isolation status
           echo "Checking security headers and isolation status..."
-          curl -v http://localhost:3000/tests/ffmpeg-core-st.test.html 2>&1 | grep -i "cross-origin"
+          # Verify COOP/COEP/OAC headers are present (served by http-server via package script)
+          curl -sI http://localhost:3000/tests/ffmpeg-core-st.test.html | grep -iE "^Cross-Origin-(Opener|Embedder)-Policy|^Origin-Agent-Cluster|^Cross-Origin-Resource-Policy"
 
           # Run verification script first
           echo "Verifying browser environment..."
