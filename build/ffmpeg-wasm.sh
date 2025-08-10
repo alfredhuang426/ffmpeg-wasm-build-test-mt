@@ -43,6 +43,7 @@ CONF_FLAGS=(
   -sELIMINATE_DUPLICATE_FUNCTIONS=1        # remove duplicate functions
   -sINLINING_LIMIT=1                       # disable inlining to reduce code size
   -sPRECISE_F32=0                          # use fast math
+  -sALIASING_FUNCTION_POINTERS=1           # optimize function pointer calls
   ${FFMPEG_MT:+ -sINITIAL_MEMORY=1024MB}   # ALLOW_MEMORY_GROWTH is not recommended when using threads, thus we use a large initial memory
   ${FFMPEG_MT:+ -sPTHREAD_POOL_SIZE=32}    # use 32 threads
   ${FFMPEG_ST:+ -sINITIAL_MEMORY=32MB -sALLOW_MEMORY_GROWTH} # Use just enough memory as memory usage can grow
