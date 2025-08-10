@@ -54,7 +54,7 @@ RUN mkdir -p /src/dist/umd && bash -x /src/build.sh \
       -o dist/umd/ffmpeg-core.js
 
 # Post-process wasm binaries for maximum size reduction
-RUN wasm-opt -Oz -o /src/dist/umd/ffmpeg-core.wasm /src/dist/umd/ffmpeg-core.wasm
+RUN wasm-opt -Oz --strip-debug --strip-producers --zero-filled-memory -o /src/dist/umd/ffmpeg-core.wasm /src/dist/umd/ffmpeg-core.wasm
 
 # Export ffmpeg-core.wasm to dist/, use `docker buildx build -o . .` to get assets
 FROM scratch AS exportor
