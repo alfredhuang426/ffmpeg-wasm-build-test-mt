@@ -32,6 +32,7 @@ CONF_FLAGS=(
   --disable-hwaccels
   --disable-indevs
   --disable-outdevs
+  --disable-devices
 )
 
 emconfigure ./configure "${CONF_FLAGS[@]}" $@
