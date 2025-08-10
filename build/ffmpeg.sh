@@ -31,6 +31,7 @@ CONF_FLAGS=(
   # Second stage: Conservative FFmpeg optimizations
   --disable-hwaccels
   --disable-indevs
+  --disable-outdevs
 )
 
 emconfigure ./configure "${CONF_FLAGS[@]}" $@
