@@ -33,7 +33,10 @@ CONF_FLAGS=(
   --disable-indevs
   --disable-outdevs
   --disable-devices
-  --disable-avdevice
+  --disable-encoders --enable-encoder=libx264
+  --disable-decoders --enable-decoder=h264,hevc,mpeg4
+  --disable-muxers --enable-muxer=mp4,mov,avi
+  --disable-demuxers --enable-demuxer=mp4,mov,avi
 )
 
 emconfigure ./configure "${CONF_FLAGS[@]}" $@
