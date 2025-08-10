@@ -27,6 +27,9 @@ CONF_FLAGS=(
 
   # disable thread when FFMPEG_ST is NOT defined
   ${FFMPEG_ST:+ --disable-pthreads --disable-w32threads --disable-os2threads}
+
+  # Second stage: Conservative FFmpeg optimizations
+  --disable-hwaccels
 )
 
 emconfigure ./configure "${CONF_FLAGS[@]}" $@
