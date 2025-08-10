@@ -33,6 +33,7 @@ CONF_FLAGS=(
   --disable-indevs
   --disable-outdevs
   --disable-devices
+  --disable-postproc
 )
 
 emconfigure ./configure "${CONF_FLAGS[@]}" $@
