@@ -54,7 +54,7 @@ CONF_FLAGS=(
   # --disable-filter=showvolume,shuffleframes,shuffleplanes
   # --disable-filter=signalstats,silencedetect,silenceremove
   # --disable-filter=split,ssim,subtitles,super2xsai,swapuv
-  # --disable-filter=telecine,thumbnail,tile,transpose,unsharp
+  --disable-filter=telecine,thumbnail,tile,transpose,unsharp
   --disable-filter=vflip,volume,volumedetect,yadif
   
   # 禁用特定解析器（保留基本解析器）
