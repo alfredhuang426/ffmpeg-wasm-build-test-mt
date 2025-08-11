@@ -34,7 +34,7 @@ CONF_FLAGS=(
   --disable-outdevs
   --disable-devices
   
-  # 編碼器 - 激進禁用，只保留 libx264 和基本編碼器
+  # 編碼器 - 極度激進禁用，只保留 libx264
   --disable-encoder=libx265,libxvid,libvpx,libvpx-vp9,libaom-av1,libtheora
   --disable-encoder=libvorbis,libopus,libmp3lame,libfdk_aac,libfaac
   --disable-encoder=wmv1,wmv2,wmv3,vc1,h263,h261,mpeg1video,mpeg2video
@@ -46,6 +46,18 @@ CONF_FLAGS=(
   --disable-encoder=amr_nb,amr_wb,gsm,gsm_ms,ilbc
   --disable-encoder=mp2,mp3,mp3adu,mp3adufloat,mp3float
   --disable-encoder=wmav1,wmav2,wmavoice,wmapro,wmalossless
+  --disable-encoder=aac,alac,amr_nb,amr_wb,aptx,aptx_hd
+  --disable-encoder=comfortnoise,cook,dca,dsd_lsbf,dsd_lsbf_planar
+  --disable-encoder=dsd_msbf,dsd_msbf_planar,eac3,evrc,flac
+  --disable-encoder=g723_1,g729,gremlin,gsm,gsm_ms,ilbc
+  --disable-encoder=libcodec2,libgsm,libgsm_ms,libilbc,libmp3lame
+  --disable-encoder=libopencore_amrnb,libopencore_amrwb,libopus
+  --disable-encoder=libspeex,libvo_amrwbenc,libvorbis,libwavpack
+  --disable-encoder=mp2,mp2fixed,mp3,mp3adu,mp3adufloat,mp3float
+  --disable-encoder=nellymoser,on2avc,opus,ra_144,ra_288,ralf
+  --disable-encoder=roq_dpcm,s302m,sbc,sipr,siren,sonic,sonic_ls
+  --disable-encoder=speex,truehd,tta,twinvq,vorbis,wmav1,wmav2
+  --disable-encoder=wmavoice,wmapro,wmalossless
   
   # 解碼器 - 激進禁用，只保留基本解碼器
   --disable-decoder=vp8,vp9,av1,theora,wmv1,wmv2,wmv3,vc1,flv,h263,h261
