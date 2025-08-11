@@ -34,7 +34,7 @@ CONF_FLAGS=(
   --disable-outdevs
   --disable-devices
   # 激進禁用更多組件
-  # --disable-bsfs
+  --disable-bsfs
   # --disable-protocols
   # 禁用特定協議（保留基本協議）
   # --disable-protocol=bluray,concat,data,ftp,gopher,hls,http,httpproxy
