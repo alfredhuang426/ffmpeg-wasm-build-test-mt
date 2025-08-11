@@ -75,6 +75,19 @@ CONF_FLAGS=(
   --disable-decoder=rv10,rv20,rv30,rv40
   --disable-decoder=indeo2,indeo3,indeo4,indeo5
   --disable-decoder=cyuv,tscc,msrle,qpeg,qtrle
+  # 激進禁用更多解碼器
+  # --disable-decoder=aac,aac_fixed,aac_latm,alac,amr_nb,amr_wb
+  --disable-decoder=aptx,aptx_hd,comfortnoise,cook,dca,dsd_lsbf
+  --disable-decoder=dsd_lsbf_planar,dsd_msbf,dsd_msbf_planar,eac3
+  --disable-decoder=evrc,g723_1,g729,gremlin,gsm,gsm_ms,ilbc
+  # --disable-decoder=libcodec2,libgsm,libgsm_ms,libilbc,libmp3lame
+  --disable-decoder=libopencore_amrnb,libopencore_amrwb,libopus
+  --disable-decoder=libspeex,libvo_amrwbdec,libvorbis,libwavpack
+  --disable-decoder=mp2,mp2fixed,mp3,mp3adu,mp3adufloat,mp3float
+  --disable-decoder=nellymoser,on2avc,opus,ra_144,ra_288,ralf
+  --disable-decoder=roq_dpcm,s302m,sbc,sipr,siren,sonic,sonic_ls
+  --disable-decoder=speex,truehd,tta,twinvq,vorbis,wmav1,wmav2
+  --disable-decoder=wmavoice,wmapro,wmalossless
   
   # Muxer - 支援常見容器
   --disable-muxers --enable-muxer=mp4,mov,avi,webm
