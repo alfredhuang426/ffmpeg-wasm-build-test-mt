@@ -53,7 +53,7 @@ CONF_FLAGS=(
   # --disable-filter=setsar,settb,sharpen,showinfo,showspectrum
   # --disable-filter=showvolume,shuffleframes,shuffleplanes
   # --disable-filter=signalstats,silencedetect,silenceremove
-  # --disable-filter=split,ssim,subtitles,super2xsai,swapuv
+  --disable-filter=split,ssim,subtitles,super2xsai,swapuv
   --disable-filter=telecine,thumbnail,tile,transpose,unsharp
   --disable-filter=vflip,volume,volumedetect,yadif
   
