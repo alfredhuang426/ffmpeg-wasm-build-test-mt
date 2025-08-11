@@ -58,11 +58,11 @@ CONF_FLAGS=(
   # --disable-filter=vflip,volume,volumedetect,yadif
   
   # 禁用特定解析器（保留基本解析器）
-  # --disable-parser=aac,aac_latm,ac3,adx,amr,av1,avs,avs2,avs3
-  # --disable-parser=bmp,cavsvideo,cook,dca,dnxhd,dolby_e,dvbsub
-  # --disable-parser=dvd_nav,dvdsub,flac,ftr,g729,gif,gsm,h261
-  # --disable-parser=h263,ipu,jpeg2000,mjpeg,mlp,mpeg4video
-  # --disable-parser=mpegaudio,mpegvideo,opus,png,prores,qoi,rv30
+  --disable-parser=aac,aac_latm,ac3,adx,amr,av1,avs,avs2,avs3
+  --disable-parser=bmp,cavsvideo,cook,dca,dnxhd,dolby_e,dvbsub
+  --disable-parser=dvd_nav,dvdsub,flac,ftr,g729,gif,gsm,h261
+  --disable-parser=h263,ipu,jpeg2000,mjpeg,mlp,mpeg4video
+  --disable-parser=mpegaudio,mpegvideo,opus,png,prores,qoi,rv30
   --disable-parser=rv40,sbc,sipr,tak,vc1,vorbis,vp3,vp8,vp9
   --disable-parser=webp,xma1,xma2
   
