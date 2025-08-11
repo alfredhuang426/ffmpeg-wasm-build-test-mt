@@ -34,6 +34,13 @@ CONF_FLAGS=(
   --disable-outdevs
   --disable-devices
   
+  # 編碼器 - 禁用大型/不需要的編碼器，保留 libx264
+  --disable-encoder=libx265,libxvid,libvpx,libvpx-vp9,libaom-av1
+  --disable-encoder=libtheora,libvorbis,libopus,libmp3lame
+  --disable-encoder=wmv1,wmv2,wmv3,vc1,h263,h261
+  --disable-encoder=flac,ape,tta,shn,ra_144,ra_288,ralf
+  --disable-encoder=webp,jpeg2000,tiff,bmp,gif,pcx,tga,sgi,iff,dxv,prores
+  
   # 解碼器 - 只禁用一些明顯不需要的大型解碼器
   --disable-decoder=vp8,vp9,av1,theora,wmv1,wmv2,wmv3,vc1,flv,h263,h261
   --disable-decoder=mp2,mp3float,mp3adu,mp3adufloat,wmav1,wmav2,wmavoice
