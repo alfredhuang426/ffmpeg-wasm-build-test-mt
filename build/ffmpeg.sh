@@ -33,6 +33,38 @@ CONF_FLAGS=(
   --disable-indevs
   --disable-outdevs
   --disable-devices
+  # 激進禁用更多組件
+  # --disable-bsfs
+  # --disable-protocols
+  # 禁用特定協議（保留基本協議）
+  # --disable-protocol=bluray,concat,data,ftp,gopher,hls,http,httpproxy
+  # --disable-protocol=https,icecast,mmsh,mmst,pipe,rtmp,rtmpe,rtmps
+  # --disable-protocol=rtmpt,rtmpte,rtmpts,rtp,srtp,tcp,tls,udp,udplite
+  # 禁用特定濾鏡（保留 scale 等基本濾鏡）
+  --disable-filter=anull,aresample,asetnsamples,asetrate,asettb,atrim
+  --disable-filter=boxblur,chromakey,colorspace,convolution,crop
+  --disable-filter=deshake,drawbox,drawtext,edgedetect,fade
+  --disable-filter=fieldorder,fps,framerate,framestep,hflip
+  --disable-filter=histogram,hqdn3d,hue,idet,interlace
+  --disable-filter=kerndeint,lowpass,mp,negate,noise,overlay
+  --disable-filter=pad,pan,perspective,phase,photosensitivity
+  --disable-filter=pp,psnr,removelogo,rotate,scale_npp
+  --disable-filter=select,sendcmd,setdar,setfield,setpts
+  --disable-filter=setsar,settb,sharpen,showinfo,showspectrum
+  --disable-filter=showvolume,shuffleframes,shuffleplanes
+  --disable-filter=signalstats,silencedetect,silenceremove
+  --disable-filter=split,ssim,subtitles,super2xsai,swapuv
+  --disable-filter=telecine,thumbnail,tile,transpose,unsharp
+  --disable-filter=vflip,volume,volumedetect,yadif
+  
+  # 禁用特定解析器（保留基本解析器）
+  # --disable-parser=aac,aac_latm,ac3,adx,amr,av1,avs,avs2,avs3
+  # --disable-parser=bmp,cavsvideo,cook,dca,dnxhd,dolby_e,dvbsub
+  # --disable-parser=dvd_nav,dvdsub,flac,ftr,g729,gif,gsm,h261
+  # --disable-parser=h263,ipu,jpeg2000,mjpeg,mlp,mpeg4video
+  # --disable-parser=mpegaudio,mpegvideo,opus,png,prores,qoi,rv30
+  --disable-parser=rv40,sbc,sipr,tak,vc1,vorbis,vp3,vp8,vp9
+  --disable-parser=webp,xma1,xma2
   
   # 編碼器 - 極度激進禁用，只保留 libx264
   --disable-encoder=libx265,libxvid,libvpx,libvpx-vp9,libaom-av1,libtheora
