@@ -35,8 +35,9 @@ CONF_FLAGS=(
   --disable-devices
   
   # 解碼器 - 只禁用一些明顯不需要的大型解碼器
-  --disable-decoder=vp8,vp9,av1,theora,wmv1,wmv2,wmv3,vc1
-  --disable-decoder=flac,ape,tta,shn,ra_144,ra_288,ralf
+  --disable-decoder=vp8,vp9,av1,theora,wmv1,wmv2,wmv3,vc1,flv,h263,h261
+  --disable-decoder=mp2,mp3float,mp3adu,mp3adufloat,wmav1,wmav2,wmavoice
+  --disable-decoder=flac,ape,tta,shn,ra_144,ra_288,ralf,roq_dpcm
   --disable-decoder=webp,jpeg2000,tiff,bmp,gif,pcx,tga,sgi,iff,dxv,prores
   
   # Muxer - 支援常見容器
