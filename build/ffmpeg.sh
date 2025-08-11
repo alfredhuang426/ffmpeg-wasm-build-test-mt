@@ -55,7 +55,7 @@ CONF_FLAGS=(
   # --disable-filter=signalstats,silencedetect,silenceremove
   # --disable-filter=split,ssim,subtitles,super2xsai,swapuv
   # --disable-filter=telecine,thumbnail,tile,transpose,unsharp
-  # --disable-filter=vflip,volume,volumedetect,yadif
+  --disable-filter=vflip,volume,volumedetect,yadif
   
   # 禁用特定解析器（保留基本解析器）
   # --disable-parser=aac,aac_latm,ac3,adx,amr,av1,avs,avs2,avs3
