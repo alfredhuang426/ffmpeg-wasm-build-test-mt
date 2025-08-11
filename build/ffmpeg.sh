@@ -33,8 +33,13 @@ CONF_FLAGS=(
   --disable-indevs
   --disable-outdevs
   --disable-devices
-  # --disable-encoders --enable-encoder=libx264
-  # --disable-decoders --enable-decoder=h264,hevc,mpeg4,mjpeg,png,jpeg
+  
+  # 解碼器 - 只禁用一些明顯不需要的大型解碼器
+  --disable-decoder=vp8,vp9,av1,theora
+  --disable-decoder=flac,ape,tta,shn
+  --disable-decoder=webp,jpeg2000,tiff,bmp,gif
+  
+  # Muxer - 支援常見容器
   --disable-muxers --enable-muxer=mp4,mov,avi,webm
   --disable-demuxers --enable-demuxer=mp4,mov,avi,webm
 )
