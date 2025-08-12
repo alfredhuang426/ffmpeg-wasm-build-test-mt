@@ -38,7 +38,7 @@ CONF_FLAGS=(
   # --disable-protocols
   # 禁用特定協議（保留基本協議）
   # --disable-protocol=bluray,concat,data,ftp,gopher,hls
-  # --disable-protocol=https,icecast,mmsh,mmst,pipe,rtmp,rtmpe,rtmps,http,httpproxy
+  --disable-protocol=https,icecast,mmsh,mmst,pipe,rtmp,rtmpe,rtmps,http,httpproxy
   --disable-protocol=rtmpt,rtmpte,rtmpts,rtp,srtp,tcp,tls,udp,udplite
   # 禁用特定濾鏡（保留 scale 等基本濾鏡）
   # --disable-filter=anull,aresample,asetnsamples,asetrate,asettb,atrim
