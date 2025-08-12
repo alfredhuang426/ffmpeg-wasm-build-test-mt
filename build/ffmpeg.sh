@@ -43,7 +43,7 @@ CONF_FLAGS=(
   # 禁用特定濾鏡（保留 scale 等基本濾鏡）
   # --disable-filter=anull,aresample,asetnsamples,asetrate,asettb,atrim
   # --disable-filter=boxblur,chromakey,colorspace,convolution,crop
-  # --disable-filter=deshake,drawbox,drawtext,edgedetect,fade
+  --disable-filter=deshake,drawbox,drawtext,edgedetect,fade
   --disable-filter=fieldorder,fps,framerate,framestep,hflip
   --disable-filter=histogram,hqdn3d,hue,idet,interlace
   --disable-filter=kerndeint,lowpass,mp,negate,noise,overlay
