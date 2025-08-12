@@ -41,7 +41,7 @@ CONF_FLAGS=(
   # --disable-protocol=https,icecast,mmsh,mmst,pipe,rtmp,rtmpe,rtmps,http,httpproxy
   # --disable-protocol=rtmpt,rtmpte,rtmpts,rtp,srtp,tcp,tls,udp,udplite
   # 禁用特定濾鏡（保留 scale 等基本濾鏡）
-  # --disable-filter=anull,aresample,asetnsamples,asetrate,asettb,atrim
+  --disable-filter=anull,aresample,asetnsamples,asetrate,asettb,atrim
   --disable-filter=boxblur,chromakey,colorspace,convolution,crop
   --disable-filter=deshake,drawbox,drawtext,edgedetect,fade
   --disable-filter=fieldorder,fps,framerate,framestep,hflip
